@@ -23,7 +23,7 @@ function Expertise() {
       <PageHero eyebrow="Expertise" title="Quality Leadership & Professional Expertise" />
       <section className="mx-auto grid max-w-7xl gap-8 px-6 py-24 md:grid-cols-2 lg:grid-cols-3">
         {EXPERTISE.map((c, i) => {
-          const Icon = ICONS[i];
+          const Icon = ICONS[i % ICONS.length]!;
           return (
             <div key={c.code} className="group relative bg-card p-9 shadow-elegant transition hover:-translate-y-1">
               <span className="absolute right-8 top-6 font-display text-6xl text-secondary">{c.code}</span>

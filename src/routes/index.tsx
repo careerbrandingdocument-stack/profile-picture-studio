@@ -66,7 +66,7 @@ function Index() {
         </div>
         <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {CAPABILITIES.map((c, i) => {
-            const Icon = ICONS[i];
+            const Icon = ICONS[i % ICONS.length]!;
             return (
               <div key={c.title} className="group bg-background p-8 transition hover:bg-card">
                 <Icon className="h-7 w-7 text-accent" strokeWidth={1.4} />
